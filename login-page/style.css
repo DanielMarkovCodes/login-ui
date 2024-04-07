@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #000000, #6e15ec); /* Gradient background from dark purple to purple */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 350px;
+    background-color: rgba(255, 255, 255, 0.1); /* Frosted glass effect with adjusted transparency */
+    padding: 30px;
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Barely visible outline */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff; /* White text color */
+    text-transform: uppercase; /* Convert to uppercase */
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 30px); /* Adjusted width */
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Barely visible border */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px; /* Increased font size */
+    color: rgba(255, 255, 255, 0.8); /* Text color same as border */
+    background-color: transparent; /* Transparent background */
+}
+
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: rgba(255, 255, 255, 0.5); /* Placeholder text color */
+}
+
+input[type="email"]:focus::placeholder,
+input[type="password"]:focus::placeholder {
+    color: transparent; /* Hide placeholder text when input is focused */
+}
+
+label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.5); /* Text color same as border */
+    font-weight: bold; /* Bold font */
+    transition: opacity 0.3s ease; /* Add transition */
+}
+
+button {
+    width: 100%;
+    margin-bottom: 10px; /* Spacing between buttons */
+    padding: 15px;
+    background-color: #8638d3;
+    color: #fff;
+    border: none;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px; /* Increased font size */
+    text-transform: uppercase; /* Convert to uppercase */
+    font-weight: bold; /* Bold font */
+}
+
+button:hover {
+    background-color: #b355e9;
+}
+
+/* Adjust the styles for the toggle button */
+/* Adjust the styles for the toggle button */
+.toggle-container {
+    position: absolute;
+    top: 40px; /* Adjust the distance from the top */
+    right: 40px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+/* Add hover effect for the toggle container */
+.toggle-container:hover .slider {
+    border-color: #b355e9; /* Change border color on hover */
+}
+
+.toggle-container:hover .slider:before {
+    background-color: #b355e9; /* Change slider circle color on hover */
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input { 
+    display: none;
+}
+
+.slider-container {
+    position: relative;
+    width: 60px;
+    height: 34px;
+    margin-left: 10px; /* Add spacing between the toggle and the container */
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    width: 100%; /* Adjust width to fill the container */
+    height: 100%; /* Adjust height to fill the container */
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+    transition: .4s;
+    border-radius: 34px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Border color same as login table */
+}
+
+/* Adjust the movement of the slider circle */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    bottom: 4px;
+    background-color: rgba(255, 255, 255, 0.2); /* Circle color same as border */
+    transition: .4s;
+    border-radius: 50%;
+    transform: translateX(5px); /* Initial position slightly to the right */
+}
+
+/* Adjust the movement of the slider circle when checked */
+input:checked + .slider:before {
+    transform: translateX(calc(100% + 4px)); /* Move circle to the right */
+}
+
